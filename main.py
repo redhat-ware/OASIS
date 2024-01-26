@@ -70,21 +70,21 @@ def location():
     while x != "north" and x != "south" and x != "east" and x != "west" and x != "northwest" and x != "northeast" and x != "southwest" and x != "southeast":
         x = input("Where would you like to travel? (north, south, east, west, northwest, northeast, southwest, southeast) >")
         if x == "north":
-            locked()
+            locked_L()
         elif x == "south":
-            locked()
+            locked_L()
         elif x == "east":
-            locked()
+            locked_L()
         elif x == "west":
-            locked()
+            locked_L()
         elif x == "northeast":
             northeast()
         elif x == "northwest":
-            locked()
+            locked_L()
         elif x == "southwest":
-            locked()
+            locked_L()
         elif x == "southeast":
-            locked()
+            locked_L()
         else:
             print("I guess I'll repeat your options then.")
             x = location()
@@ -368,8 +368,11 @@ def game_over():
 ''')
 
 def locked():
-    print('''It seems this particular area is not available. Perhaps your playing the DEMO or BETA build.
-    For any full version of OASIS, consider funding our Patreon! Full versions,first hear news, and exclusive content!''')
+    print('''In this version of the game, this is not made/avilible. Look at our itch page for update!''')
+    location()
+
+def locked_L():
+    print('''You see a bit sight that says: ERROR, NOT AVAILBE. Maybe try somewhere else?''')
     location()
 
 def current_end():
