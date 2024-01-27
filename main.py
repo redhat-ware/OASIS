@@ -33,6 +33,19 @@ def logo():
 def opening():
     print("You open your eyes....")
     time.sleep(3)
+    
+    # Ask for the player's name
+    
+    player_name = input("What is your name? ")
+    time.sleep(3)
+    
+    # Display a welcome message with the player's name
+    
+    print(f"You see a map in front of you, {player_name}.")
+    time.sleep(3)
+    
+    destination = input("Where do you want to go? ")
+    
     print("In front of you, is a journey, a quest if you would.")
     time.sleep(3)
     print("The Nine Regions of Vastora have at least one or more tribute, waiting to have their desires of love and lust be fullfiled.")
