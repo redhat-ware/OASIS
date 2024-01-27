@@ -36,15 +36,15 @@ def opening():
     
     # Ask for the player's name
     
-    player_name = input("What is your name? ")
+    player_name = input("What is your name?")
     time.sleep(3)
     
     # Display a welcome message with the player's name
     
-    print(f"You see a map in front of you, {player_name}.")
+    print(f"You see a map in front of you.")
     time.sleep(3)
     
-    destination = input("Where do you want to go? ")
+    destination = input("Where do you want to go?")
     
     print("In front of you, is a journey, a quest if you would.")
     time.sleep(3)
@@ -347,10 +347,29 @@ def Alyx_Dialogue_2a():
     time.sleep(3)
     print("Alyx hands you an orange slip of fabric. A tribute has now been marked.")
     time.sleep(3)
+    
+    while x != "A" and x != "B":
+        x = input("*Alyx moves slowly away, you sence something change in your heart*")
+        if x == "A":
+            print("Wait! My name's {player_name}, I cant wait to see you again!")
+            time.sleep(2)
+            Alyx_Dialogue_2a()
+        elif x == "B":
+            print("Bye! *waves*")
+            time.sleep(2)
+            Wave_back_alyx
+        else:
+            print("You see Alyx move off past ear shot of anything you could say")
+
+def BK_back_alyx():
+    print("Alyx blows a kiss back to you. The feelings between you grow stronger.")
+    sleep(5)
     current_end()
 
-
-
+def wave_back_alyx():
+    print("Alyx waves back to you. The feelings between you are obtimistic.")
+    sleep(5)
+    current_end()
 
 
 def tryagain():
